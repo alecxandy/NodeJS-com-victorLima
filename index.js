@@ -3,12 +3,14 @@ const app = express(); //variavel de aplicação onde recebe as funcionalidades 
 
 //aqui fica uma rota
 app.get("/", function (req, res) {
-  res.send("Hello word");//função send só bode ser enviado uma vez
+  res.sendFile(__dirname + "/html/index.html");
+  //__dirname = retorna o endereço padrao do diretorio
+  //função send só bode ser enviado uma vez
 });
 
 //aqui fica uma rota
 app.get("/sobre", function (req, res) {
-  res.send("Bem vindo a meu app");
+  res.sendFile(__dirname + "/html/sobre.html");
 });
 
 app.get("/ola/:nome", function (req, res) {
