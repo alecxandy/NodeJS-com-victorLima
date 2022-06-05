@@ -1,0 +1,22 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecxandy/NodeJS-com-victorLima.git"
+  },
+  "author": "Alexandre Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecxandy/NodeJS-com-victorLima/issues"
+  },
+  "homepage": "https://github.com/alecxandy/NodeJS-com-victorLima#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
