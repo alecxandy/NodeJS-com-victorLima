@@ -4,6 +4,7 @@ const sequelize = new Sequelize("testeNodejs", "root", "Cola132305", {
   dialect: "mysql"
 });
 
+//teste de conecxao com o mysql
 sequelize
   .authenticate()
   .then(function () {
@@ -12,3 +13,17 @@ sequelize
   .catch(function (erro) {
     console.log("falha ao se conectar: " + erro);
   });
+
+//model postagem
+const Postagem = sequelize.define("postagens", {
+  titulo: {
+    type: Sequelize.STRING
+  },
+  conteudo: {
+    type: Sequelize.TEXT
+  }
+});
+
+Postagem.sync({
+  force: true
+});
