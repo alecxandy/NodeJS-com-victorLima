@@ -1,3 +1,4 @@
+//conecxao com banco
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize("testeNodejs", "root", "Cola132305", {
   host: "localhost",
@@ -24,6 +25,30 @@ const Postagem = sequelize.define("postagens", {
   }
 });
 
+//executando o comando de criação da tabela
 Postagem.sync({
   force: true
 });
+
+//model Usuarios
+const Usuarios = sequelize.define("usuarios", {
+  nome: {
+    type: Sequelize.STRING
+  },
+  sobrenome: {
+    type: Sequelize.TEXT
+  },
+  idade: {
+    type: Sequelize.INTEGER
+  },
+  email: {
+    type: Sequelize.STRING
+  }
+});
+
+//executando o comando de criação da tabela
+Usuarios.sync({
+  force: true
+});
+
+Usuarios.create
